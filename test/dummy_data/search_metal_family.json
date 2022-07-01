@@ -1,0 +1,29 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "backdrop_path": "/1ejS56lC8db62IKVj1pTQlfAEQy.jpg",
+      "first_air_date": "2018-09-13",
+      "genre_ids": [
+        10759,
+        16,
+        18,
+        10751
+      ],
+      "id": 123566,
+      "name": "Metal Family",
+      "origin_country": [
+        "RU"
+      ],
+      "original_language": "ru",
+      "original_name": "Metal Family",
+      "overview": "Metal Family follows the daily lives of Glam and Victoria, two metal fans that fell in love and had two children together, Dee and Heavy.",
+      "popularity": 28.022,
+      "poster_path": "/yovTSLBdNjXIVo8CPaPWFE5NcAw.jpg",
+      "vote_average": 8.9,
+      "vote_count": 317
+    }
+  ],
+  "total_pages": 1,
+  "total_results": 1
+}
