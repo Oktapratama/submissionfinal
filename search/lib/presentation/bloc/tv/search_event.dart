@@ -1,8 +1,8 @@
 part of 'search_bloc.dart';
 
-abstract class TvSearchEvent extends Equatable {}
+abstract class SearchTvEvent extends Equatable {}
 
-class OnTvQueryChanged extends TvSearchEvent {
+class OnTvQueryChanged extends SearchTvEvent {
   final String query;
 
   OnTvQueryChanged(this.query);

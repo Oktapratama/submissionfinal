@@ -104,7 +104,7 @@ void init(HttpClient httpClient) {
           () => WatchlistTvBloc(
           getWatchlistTv: locator()));
   locator.registerFactory(
-          () => TvSearchBloc(
+          () => SearchTvBloc(
           tv: locator()));
 
 

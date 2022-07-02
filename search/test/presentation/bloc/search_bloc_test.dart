@@ -16,7 +16,7 @@ import 'search_bloc_test.mocks.dart';
 @GenerateMocks([SearchMovies, SearchTv])
 void main() {
   late MoviesSearchBloc moviesSearchBloc;
-  late TvSearchBloc tvSearchBloc;
+  late SearchTvBloc tvSearchBloc;
   late MockSearchMovies mockSearchMovies;
   late MockSearchTV mockSearchTV;
 
@@ -24,7 +24,7 @@ void main() {
     mockSearchMovies = MockSearchMovies();
     mockSearchTV = MockSearchTV();
     moviesSearchBloc = MoviesSearchBloc(movies: mockSearchMovies);
-    tvSearchBloc = TvSearchBloc(tv: mockSearchTV);
+    tvSearchBloc = SearchTvBloc(tv: mockSearchTV);
   });
 
   final tMovieModel = Movie(
@@ -97,7 +97,7 @@ void main() {
     test('initial state should be empty', () {
       expect(tvSearchBloc.state, TVSearchEmpty());
     });
-    blocTest<TvSearchBloc, TvSearchState>(
+    blocTest<SearchTvBloc, SearchTvState>(
         'should emit [Loading, Data] when data is gotten successfully',
         build: () {
           when(mockSearchTV.execute(tQueryTV))
@@ -109,7 +109,7 @@ void main() {
         expect: () => [TvSearchLoading(), SearchTvData(tTVList)],
         verify: (bloc) => verify(mockSearchTV.execute(tQueryTV)));
 
-    blocTest<TvSearchBloc, TvSearchState>(
+    blocTest<SearchTvBloc, SearchTvState>(
         'should emit [Loading, Error] when data search is unsuccessful',
         build: () {
           when(mockSearchTV.execute(tQueryTV))

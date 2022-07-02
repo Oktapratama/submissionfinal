@@ -6,10 +6,10 @@ import '../../../domain/search_tv.dart';
 part 'search_event.dart';
 part 'search_state.dart';
 
-class TvSearchBloc extends Bloc<TvSearchEvent, TvSearchState> {
+class SearchTvBloc extends Bloc<SearchTvEvent, SearchTvState> {
   final SearchTv tv;
 
-  TvSearchBloc({required this.tv}) : super(TVSearchEmpty()) {
+  SearchTvBloc({required this.tv}) : super(TVSearchEmpty()) {
     on<OnTvQueryChanged>((event, emit) async {
       final dataQuery = event.query;
 

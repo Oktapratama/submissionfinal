@@ -27,7 +27,7 @@ void main() {
     return MultiBlocProvider(
       providers: [
         BlocProvider<MoviesSearchBloc>.value(value: mockMoviesSearchBloc),
-        BlocProvider<TvSearchBloc>.value(value: mockTVSearchBloc),
+        BlocProvider<SearchTvBloc>.value(value: mockTVSearchBloc),
       ],
       child: MaterialApp(home: body),
     );

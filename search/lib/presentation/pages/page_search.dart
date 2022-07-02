@@ -29,7 +29,7 @@ class SearchPage extends StatelessWidget {
                 context
                     .read<MoviesSearchBloc>()
                     .add(OnMoviesQueryChanged(query));
-                context.read<TvSearchBloc>().add(OnTvQueryChanged(query));
+                context.read<SearchTvBloc>().add(OnTvQueryChanged(query));
               },
               decoration: const InputDecoration(
                 hintText: 'Search title',
@@ -45,7 +45,7 @@ class SearchPage extends StatelessWidget {
             ),
             BlocBuilder<MoviesSearchBloc, MoviesSearchState>(
               builder: (_, movieObject) =>
-                  BlocBuilder<TvSearchBloc, TvSearchState>(
+                  BlocBuilder<SearchTvBloc, SearchTvState>(
                       builder: (_, tvObject) {
                         if (movieObject is MoviesSearchLoading &&
                             tvObject is TvSearchLoading) {
@@ -71,7 +71,7 @@ class SearchPage extends StatelessWidget {
                             )
                                 : const Center(
                               child: Text(
-                                'Data cannot be found at Movies or TV',
+                                'Data cannot be found',
                               ),
                             ),
                           );

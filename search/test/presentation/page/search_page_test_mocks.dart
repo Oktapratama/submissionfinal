@@ -11,9 +11,9 @@ class MoviesSearchStateFake extends Fake implements MoviesSearchState {}
 
 class MoviesSearchEventFake extends Fake implements MoviesSearchEvent {}
 
-class MockTvSearchBloc extends MockBloc<TvSearchEvent, TvSearchState>
-    implements TvSearchBloc {}
+class MockTvSearchBloc extends MockBloc<SearchTvEvent, SearchTvState>
+    implements SearchTvBloc {}
 
-class TvSearchStateFake extends Fake implements TvSearchState {}
+class TvSearchStateFake extends Fake implements SearchTvState {}
 
-class TvSearchEventFake extends Fake implements TvSearchEvent {}
+class TvSearchEventFake extends Fake implements SearchTvEvent {}

@@ -1,18 +1,18 @@
 part of 'search_bloc.dart';
 
-abstract class TvSearchState extends Equatable {}
+abstract class SearchTvState extends Equatable {}
 
-class TVSearchEmpty extends TvSearchState {
+class TVSearchEmpty extends SearchTvState {
   @override
   List<Object> get props => [];
 }
 
-class TvSearchLoading extends TvSearchState {
+class TvSearchLoading extends SearchTvState {
   @override
   List<Object> get props => [];
 }
 
-class TvSearchError extends TvSearchState {
+class TvSearchError extends SearchTvState {
   final String pesan;
 
   TvSearchError(this.pesan);
@@ -21,7 +21,7 @@ class TvSearchError extends TvSearchState {
   List<Object> get props => [pesan];
 }
 
-class SearchTvData extends TvSearchState {
+class SearchTvData extends SearchTvState {
   final List<Tv> hasil;
 
   SearchTvData(this.hasil);
