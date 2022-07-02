@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1092674222194",
+    "project_id": "submisexpert",
+    "storage_bucket": "submisexpert.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092674222194:android:34542bf991fb13d7916aeb",
+        "android_client_info": {
+          "package_name": "com.dicoding.ditonton"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1092674222194-9r72m9fshdoej8uj8971nbid4m1e02bi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASYbyq5etXhHHQkkuy-XVTDM8AfJU2ivI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1092674222194-9r72m9fshdoej8uj8971nbid4m1e02bi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
