@@ -57,7 +57,7 @@ class _HomeTvPage extends State<HomeTvPage> {
         _buildSubHeading(
             title: 'Top Rated TV',
             onTap: () => Navigator.pushNamed(context, ROUTE_TV_TOP_RATED)),
-        BlocBuilder<TopTvBloc, TopTvState>(
+        BlocBuilder<TopRatedTvBloc, TopTvState>(
           builder: (_, state) {
             if (state is TopTvLoading) {
               return Center(child: CircularProgressIndicator());

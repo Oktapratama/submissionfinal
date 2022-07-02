@@ -46,6 +46,8 @@ dependencies:
     path: search
 
   provider: ^6.0.3
+  firebase_crashlytics: ^2.8.2
+  firebase_core: ^1.18.0
 
 dev_dependencies:
   mockito: ^5.0.8
@@ -68,6 +70,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
+    - certificates/certificates.cer
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

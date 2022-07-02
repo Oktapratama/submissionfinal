@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:core/data/datasources/movie_local_data_source.dart';
 import 'package:core/data/datasources/movie_remote_data_source.dart';
 import 'package:core/data/datasources/tv_local_data_resource.dart';
@@ -88,7 +87,7 @@ void init(HttpClient httpClient) {
           () => PopularTvBloc(
           getPopularTv: locator()));
   locator.registerFactory(
-          () => TopTvBloc(
+          () => TopRatedTvBloc(
           getTopTv: locator()));
   locator.registerFactory(
           () =>TvDetailBloc(

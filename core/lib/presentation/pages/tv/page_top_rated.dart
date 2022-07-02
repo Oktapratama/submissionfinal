@@ -1,10 +1,8 @@
-
-import 'package:core/core.dart';
 import 'package:core/presentation/bloc/tv/top_rated_tv_bloc.dart';
 import 'package:core/presentation/widgets/tv_card_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:provider/provider.dart';
+
 
 class TopTvPage extends StatefulWidget {
   const TopTvPage({Key? key}) : super(key: key);
@@ -18,7 +16,7 @@ class _TopTvPageState extends State<TopTvPage> {
   void initState() {
     super.initState();
     Future.microtask(
-            () => BlocProvider.of<TopTvBloc>(context).add(FetchTopTv()));
+            () => BlocProvider.of<TopRatedTvBloc>(context).add(FetchTopRatedTv()));
   }
 
   @override
@@ -29,7 +27,7 @@ class _TopTvPageState extends State<TopTvPage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: BlocBuilder<TopTvBloc, TopTvState>(
+        child: BlocBuilder<TopRatedTvBloc, TopTvState>(
           builder: (_, state) {
             if (state is TopTvLoading) {
               return const Center(

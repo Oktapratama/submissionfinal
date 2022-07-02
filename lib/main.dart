@@ -21,9 +21,7 @@ import 'package:core/presentation/pages/tv/page_detail.dart';
 import 'package:core/presentation/pages/tv/page_popular.dart';
 import 'package:core/presentation/pages/tv/page_top_rated.dart';
 import 'package:core/presentation/pages/watchlist_page.dart';
-import 'package:core/styles/colors.dart';
-import 'package:core/styles/text_styles.dart';
-// import 'package:core/utils/ssl.dart';
+import 'package:core/utils/ssl_helper.dart';
 import 'package:core/utils/utils.dart';
 import 'package:about/about_page.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -36,18 +34,12 @@ import 'package:ditonton/injection.dart' as di;
 import 'package:search/presentation/bloc/movie/search_bloc.dart';
 import 'package:search/presentation/bloc/tv/search_bloc.dart';
 import 'package:search/presentation/pages/page_search.dart';
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
 
-// void main() {
-//   // WidgetsFlutterBinding.ensureInitialized();
-//   // await Firebase.initializeApp();
-//   //
-//   // // Pass all uncaught errors from the framework to Crashlytics.
-//   // FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
-//   // di.init(await getHttpClient());
-//   di.init();
-//   runApp(MyApp());
-// }
-void main() {
+  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+  di.init(await getHttpClient());
   runApp(MyApp());
 }
 
@@ -91,7 +83,7 @@ class MyApp extends StatelessWidget {
           create: (_) => di.locator<PopularTvBloc>(),
         ),
         BlocProvider(
-          create: (_) => di.locator<TopTvBloc>(),
+          create: (_) => di.locator<TopRatedTvBloc>(),
         ),
         BlocProvider(
           create: (_) => di.locator<TvDetailBloc>(),

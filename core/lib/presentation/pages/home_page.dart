@@ -9,6 +9,7 @@ import 'package:core/presentation/pages/home_movie_page.dart';
 import 'package:core/presentation/pages/tv/page_home.dart';
 import 'package:core/presentation/widgets/drawer.dart';
 import 'package:core/utils/utils.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +32,7 @@ class _HomePage extends State<HomePage> {
 
       BlocProvider.of<NowPlayingTvBloc>(context).add(FetchNowPlayingTv());
       BlocProvider.of<PopularTvBloc>(context).add(FetchPopularTv());
-      BlocProvider.of<TopTvBloc>(context).add(FetchTopTv());
+      BlocProvider.of<TopRatedTvBloc>(context).add(FetchTopRatedTv());
     });
   }
 
