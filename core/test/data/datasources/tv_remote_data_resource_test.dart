@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:core/data/datasources/tv_remote_data_resource.dart';
 import 'package:core/data/models/tv/tv_detail_model.dart';
 import 'package:core/data/models/tv/tv_response.dart';
