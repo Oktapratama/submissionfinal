@@ -110,7 +110,7 @@ void main() {
 
       await test.pumpWidget(_makeTestableWidget(const SearchPage()));
 
-      final errorText = find.text('Data cannot be found at Movies or TV');
+      final errorText = find.text('Data cannot be found');
       final textField = find.byKey(const Key('search-textfield'));
       final queryText = find.text('superman');
 
