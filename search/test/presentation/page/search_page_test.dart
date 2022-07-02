@@ -102,7 +102,7 @@ void main() {
     });
 
     testWidgets(
-        "should display ('Data cannot be found at Movies or TV') when result is empty",
+        "should display ('Data cannot be found') when result is empty",
         (WidgetTester test) async {
       when(() => mockMoviesSearchBloc.state)
           .thenReturn(SearchMoviesData(const []));
